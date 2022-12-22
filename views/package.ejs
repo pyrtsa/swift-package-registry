@@ -86,7 +86,7 @@
 
 	 					<% if (package.latest_release) { %>
 			 				<div class="input-group mb-3">
-								<input readonly value=".Package(url: &quot;<%= package.info.clone_url %>&quot;, .upToNextMajor(from: &quot;<%= package.latest_release.tag_name.replace("v", "") %>&quot;))" class="form-control code-block" id="release-copy">
+								<input readonly value=".package(url: &quot;<%= package.info.clone_url %>&quot;, .upToNextMajor(from: &quot;<%= package.latest_release.tag_name.replace("v", "") %>&quot;))" class="form-control code-block" id="release-copy">
 								<span class="input-group-append">
 									<button class="btn clippy btn-secondary" data-clipboard-target="#release-copy" aria-label="Copy">
 		    							<i class="fa fa-copy" aria-hidden="true"></i><span class="d-none" aria-hidden="true"> Copy</span>
@@ -96,7 +96,7 @@
 						<% } %>
 
 						<div class="input-group">
-								<input readonly value=".Package(url: &quot;<%= package.info.clone_url %>&quot;, branch: &quot;<%= package.info.default_branch %>&quot;)" class="form-control code-block" id="branch-copy">
+								<input readonly value=".package(url: &quot;<%= package.info.clone_url %>&quot;, branch: &quot;<%= package.info.default_branch %>&quot;)" class="form-control code-block" id="branch-copy">
 								<span class="input-group-append">
 									<button class="btn clippy btn-secondary" data-clipboard-target="#branch-copy" aria-label="Copy">
 		    							<i class="fa fa-copy" aria-hidden="true"></i><span class="d-none" aria-hidden="true"> Copy</span>
